@@ -1,0 +1,248 @@
+@font-face
+{
+    font-family: Oswald;
+    src: url("../fonts/Oswald/static/Oswald-Regular.ttf") ;
+}
+
+@font-face
+{
+    font-family: Kanit;
+    src: url("../fonts/Kanit/Kanit-Regular.ttf");
+}
+
+@font-face {
+    font-family: Montsarat;
+    src: url("../fonts/Montserrat/static/Montserrat-Light.ttf");
+}
+
+@font-face {
+    font-family: Twilio;
+    src: url("../fonts/Twilio-Sans-Mono/TTF/TwilioSansMono-Medium.ttf");
+}
+
+body 
+{
+    background: #0f0f0f;
+    font-family: kanit;
+}
+.po-contact-me
+{
+    position: relative;
+    top: 5vw;
+    height: auto;
+    color: #dbdbdb;
+    text-align: center;
+}
+
+.po-contact-me .button
+{
+    margin-top: 2vw;
+    width: 20%;
+    left: 50%;
+    position: relative;
+    transform: translateX(-50%);
+}
+
+@keyframes size 
+{
+    from {
+        font-size: 1vw;
+    }
+    to {
+        font-size: 3vw;
+    }
+}
+
+.po-contact-me .text 
+{
+    font-size: 20px;
+    margin-bottom: 0.7vw;
+}
+
+.po-contact-me .button i 
+{
+    position: absolute;
+    transform: translateY(25%);
+    transition: 0.5s;
+    margin-left: 0.5vw;
+}
+
+.po-contact-me .button button
+{
+    text-decoration: none;
+    background-color: #BCFD4C;
+    color: black;
+    font-size: 25px;
+    padding: 5px 10px;
+    border-radius: 7px;
+    transition: 0.5s;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: 'Oswald';
+}
+.po-contact-me .button button:hover
+{
+    background-color: transparent;
+    color: white;
+    border: 2px solid #BCFD4C;
+    transition: 0.5s;
+}
+.po-contact-me .button:hover i
+{
+    margin-left: 1.3vw;
+}
+
+.loginPopup 
+{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    width: 40%;
+    border-radius: 7px;
+}
+
+.loginText
+{
+    margin: 10px;
+}
+
+.loginText h5
+{
+    text-align: center;
+    margin-bottom: 5%;
+    font-size: 25px;
+    color: #000;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+.loginText h6 
+{
+    font-size: 15px;
+}
+
+.loginText p
+{
+    font-size: 12px;
+    color: #5a5a5a;
+}
+
+#closePopup
+{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 7px 10px;
+    border: transparent;
+    background-color: #f11111;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.send
+{
+    background-color: #BCFD4C;
+    cursor: pointer;
+}
+
+#overlay 
+{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* semi-transparent zwart */
+    z-index: 5000; /* achter de popup maar voor de inhoud */
+}
+
+.blur-background 
+{
+    filter: blur(5px);
+}
+
+.userInformation 
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.emailInformation 
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.userInformation .input 
+{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+input 
+{
+    border: transparent;
+    background-color: #f3f0f0;
+    height: 30px;
+    border-radius: 5px;
+    margin: 10px;
+    font-family: 'Kanit';
+    padding-left: 15px;
+}
+
+textarea 
+{
+    border: transparent;
+    background-color: #f3f0f0;
+    border-radius: 5px;
+    margin: 10px;
+    font-family: 'Kanit';
+    padding-left: 15px;
+    padding-top: 5px;
+    resize: vertical;
+    overflow: auto; 
+}
+
+/* Create the mobile version  */
+@media only screen and (max-width: 1000px) {
+    /* Styling the contact me section */
+    /* Styling the question */
+    .po-contact-me .question i
+    {
+        font-size: 15px;
+    }
+
+    /* Styling the title of the contact section */
+    .po-contact-me .title
+    {
+        font-size: 35px;
+        animation: none;
+    }
+
+    .po-contact-me .button 
+    {
+        width: 40%;
+    }
+
+    .po-contact-me .button i
+    {
+        transform: translateY(65%);
+        margin-left: 1.5vw;
+    }
+    /* Style the contact form */
+    .loginPopup
+    {
+        width: 90%;
+    }
+}
